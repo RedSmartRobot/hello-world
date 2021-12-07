@@ -10,7 +10,7 @@
 
 <script>
 async function myFunction() {
-  document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + " Paragraph changed.";
+  
   try {
     document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + " Paragraph changed.";
     // Will open the MetaMask UI
@@ -18,6 +18,9 @@ async function myFunction() {
     await ethereum.request({ method: 'eth_requestAccounts' });
   } catch (error) {
     console.error(error);
+    document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "___" +window.ethereum.networkVersion;
+    
+    
   }
   
 }
