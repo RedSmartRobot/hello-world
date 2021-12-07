@@ -17,7 +17,7 @@ async function myFunction() {
     // You should disable this button while the request is pending!
     const accs = await ethereum.request({ method: 'eth_requestAccounts' });
     console.log (window.ethereum.networkVersion);
-    console.log accs;
+    console.log (accs);
     
   } catch (error) {
     console.error(error);
