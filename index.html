@@ -16,9 +16,10 @@ async function myFunction() {
     // Will open the MetaMask UI
     // You should disable this button while the request is pending!
     await ethereum.request({ method: 'eth_requestAccounts' });
+    document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "___" +window.ethereum.networkVersion;
   } catch (error) {
     console.error(error);
-    document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "___" +window.ethereum.networkVersion;
+    
     
     
   }
